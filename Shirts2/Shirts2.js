@@ -122,13 +122,12 @@ else{
 
 existingCartData.forEach(product => {
     console.log('product: '+JSON.stringify(product));
-    if(product.name === "Pidorok"){
+    if(product.name === "Poluchen"){
         console.log('enter logic')
 
         document.querySelector('.purchase-btn').disabled = true;
     }
 })
-
 var purchaseButton = document.querySelector(".purchase-btn");
 
 // Функция для изменения цвета кнопки "Оформить заказ" при нажатии
