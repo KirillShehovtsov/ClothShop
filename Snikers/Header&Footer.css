@@ -1,0 +1,123 @@
+*
+{
+margin:0;
+}   
+@font-face {
+    font-family:"Inria Serif";
+    src: url('../fonts/InriaSerif-Regular.ttf');
+}
+@font-face {
+    font-family:"Ledger";
+    src: url('../fonts/Ledger-Regular.ttf');
+}
+svg{
+    position: absolute;
+    right: 0;
+    margin-right: 20px;
+}
+.FirstString {
+    display: flex;
+    align-items: center;
+    height: 100px;
+    background-color: #2d2424;
+    color: rgb(250, 250, 250);
+    position: relative; /* Добавлено */
+}
+
+.Name {
+    font-family: "Inria Serif";
+    position: absolute;
+    left: 50%; /* Изменено */
+    transform: translateX(-50%); /* Добавлено */
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.Menu {
+    font-family: "Inria Serif";
+    left: 20px;
+    position: relative; /* изменение */
+    display: flex;
+    width: 129px;
+    height: 34px;
+    background-color: black;
+    text-align: center;
+    border-radius: 30px;
+    flex-direction: column;
+    font-size: 20px;
+}
+
+.MenuList {
+    display: none;
+    padding: 0;
+    list-style: none;
+    position: absolute;
+    top: 65%;
+    left: 0;
+    background-color: #000000;
+    border-radius: 20px;
+    animation: slide-down 0.3s ease;
+}
+
+.MenuList.show {
+    display: flex; /* изменение */
+    flex-direction: column; /* добавлено */
+    background-color: #000000;
+    border-radius: 20px;
+}
+
+.MenuList a {
+    font-size: 24px;
+    text-decoration: none;
+    outline: none;
+    display: block;
+    letter-spacing: 1px;
+    font-weight: 300;
+    color: #d4c9c9;
+    transition: .3s linear; 
+}
+
+.MenuList a:hover {
+    color: #b99d61;
+}
+
+/* Анимация расскрытия */
+@keyframes slide-down {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+footer {
+    font-family: "Inria Serif";
+    margin-top: auto; /* Изменено */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    background-color: #aea3a3;
+    position: fixed; /* Добавлено */
+    bottom: 0; /* Добавлено */
+    width: 100%; /* Добавлено */
+    color: #fff;
+}
+
+.NameByFooter 
+{
+text-align: center; 
+font-size: 1.45rem;
+font-weight: bold;
+margin-left: 20px; 
+}
+
+.contacts 
+{
+font-weight: bolder;
+margin-right: 40px; 
+}

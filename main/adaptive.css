@@ -1,0 +1,230 @@
+@media only screen and (min-width: 430px) and (max-width: 768px) {
+
+    .burger { 
+        display: flex 
+      }
+        .navigation{
+            display: none;
+            flex-direction: column;
+            position: fixed;
+            height: 100%;
+            width: 100%;
+            top: 0; bottom: 0; left: 0; right: 0;
+            z-index: 50;
+            overflow-y: auto;
+            left: 50%; 
+            top: 50%; 
+            transform: translate(-50%, -50%); 
+            background-color: black;
+            animation: burgerAnimation 0.4s;
+        }
+    
+        .navigation ul li {
+            margin-top: 50px; /* Добавляем отступ сверху для пунктов меню */
+        }    
+    .FirstString {
+        height: 60px; /* Фиксированная высота для предотвращения наезда на меню */
+        padding: 10px 0;
+    }
+    
+    .Name {
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        font-size: 1.5rem;
+    }
+    
+    .Menu {
+        display:none;
+    }
+    
+    
+    
+    .SecondString {
+        display: none; /* Скрываем вторую строку */
+    }
+    
+    .mainItems {
+        font-size: 20px;
+        margin: 0 10px;
+    }
+    
+    .Objects {
+        width: 100%; /* Занимает всю ширину */
+        padding: 10px 0;
+        display: flex;
+        flex-wrap: wrap; /* Элементы переносятся на новую строку */
+        justify-content: space-around; /* Равномерное распределение элементов по ширине */
+    }
+    
+    .Showcase {
+        padding-top: 80px; /* Уменьшаем отступ сверху */
+    }
+    
+    .textOne {
+        font-size: 20px;
+        padding-top: 200px;
+        padding-left: 15px;
+    }
+    
+    .textTwo {
+        font-size: 16px;
+        padding-top: 10px;
+        padding-left: 15px;
+    }
+    
+    .Recomends {
+        font-size: 22px;
+        margin-right: 10px;
+    }
+    
+    .container {
+        flex-direction: column;
+        column-count: 2; 
+        align-items: center; /* Выравниваем элементы по центру */
+        height:auto ;
+        width: 100%;
+        margin-left: 0px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between; /* Равномерное распределение строк */
+    }
+    
+    .Frame {
+        margin: 10px; /* Отступ между карточками */
+        width: 200px;
+        height: 250px;
+    }
+    
+    .Frame img {
+        width: 160px;
+        height: 160px; /* Автоматическая высота для сохранения пропорций */
+    }
+    
+    .Button {
+        display: none;
+    }
+    
+    .cost {
+        font-size: 16px;
+        margin-left: 70px;
+        margin-top: 20px;
+    }
+    .NameByFooter{
+        font-size: 1rem;
+    }
+    .contacts{
+        font-size: 12px;
+    }
+}
+/* Для планшетов */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    /* Скрытие второй строки */
+    .SecondString {
+        display: none;
+    }
+    
+    .Menu{
+        display:none;
+    }
+    .Button{
+        display: none;
+    }
+    .navigation{
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        top: 0; bottom: 0; left: 0; right: 0;
+        z-index: 50;
+        overflow-y: auto;
+        left: 50%; 
+        top: 50%; 
+        transform: translate(-50%, -50%); 
+        background-color: black;
+        animation: burgerAnimation 0.4s;
+    }
+
+    .navigation ul li {
+        margin-top: 50px; /* Добавляем отступ сверху для пунктов меню */
+    }    
+
+    .FirstString {
+        display: flex;
+        align-items: center;
+        height: 70px;
+        background-color: #2d2424;
+        color: rgb(250, 250, 250);
+        position: relative; /* Добавлено */
+    }
+
+    .container {
+        display: flex;
+        height:280px;
+        margin: 0 auto;
+        width: 700px;    
+        margin-bottom:40px ;
+    }
+
+    .Name {
+        font-size: 1.8rem;
+    }
+
+    .mainItems {
+        font-size: 22px;
+        margin: 0 8px;
+    }
+
+    .Showcase .textOne {
+        font-size: 18px;
+        padding-top: 180px;
+        padding-left: 12px;
+    }
+
+    .Showcase .textTwo {
+        font-size: 14px;
+        padding-top: 10px;
+        padding-left: 12px;
+    }
+
+    .Recomends {
+        font-size: 20px;
+        margin-right: 8px;
+    }
+
+    .Frame {
+        margin-left: 10px;
+        width: 155px;
+        height: 200px;
+    }
+
+    .Frame img {
+        width: 110px;
+        height: 140px;
+    }
+
+    .cost {
+        font-size: 14px;
+        margin-left: 50px;
+        margin-top: 15px;
+    }
+
+    .NameByFooter {
+        font-size: 1.2rem;
+    }
+
+    .contacts {
+        font-size: 10px;
+        margin-right: 30px;
+    }
+
+    /* Отображение бургер-меню */
+    .burger {
+        display: flex;
+    }
+
+    .navigation {
+        display: none;
+    }
+}

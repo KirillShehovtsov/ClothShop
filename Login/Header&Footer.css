@@ -1,0 +1,211 @@
+*
+{
+margin:0;
+}   
+@font-face {
+    font-family:"Inria Serif";
+    src: url('../fonts/InriaSerif-Regular.ttf');
+}
+@font-face {
+    font-family:"Ledger";
+    src: url('../fonts/Ledger-Regular.ttf');
+}
+svg{
+    position: absolute;
+    right: 0;
+    margin-right: 20px;
+}
+.FirstString {
+    display: flex;
+    margin-top: auto;
+    align-items: center;
+    height: 100px;
+    background-color: #2d2424;
+    color: rgb(250, 250, 250);
+    position: relative; /* Добавлено */
+}
+
+.Name {
+    font-family: "Inria Serif";
+    position: absolute;
+    left: 50%; /* Изменено */
+    transform: translateX(-50%); /* Добавлено */
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.Menu {
+    font-family: "Inria Serif";
+    left: 20px;
+    position: relative; /* изменение */
+    display: flex;
+    width: 129px;
+    height: 34px;
+    background-color: black;
+    text-align: center;
+    border-radius: 30px;
+    flex-direction: column;
+    font-size: 20px;
+}
+
+.MenuList {
+    display: none;
+    padding: 0;
+    list-style: none;
+    position: absolute;
+    top: 70%;
+    left: 0;
+    background-color: #000000;
+    border-radius: 20px;
+    animation: slide-down 0.3s ease;
+}
+
+.MenuList.show {
+    display: flex; /* изменение */
+    flex-direction: column; /* добавлено */
+    background-color: #000000;
+    border-radius: 20px;
+}
+
+.MenuList a {
+    font-size: 24px;
+    text-decoration: none;
+    outline: none;
+    display: block;
+    padding: 6px 0; 
+    letter-spacing: 1px;
+    font-weight: 300;
+    color: #d4c9c9;
+    transition: .3s linear; 
+}
+
+.MenuList a:hover {
+    color: #b99d61;
+}
+
+/* Анимация расскрытия */
+@keyframes slide-down {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+footer {
+    font-family: "Inria Serif";
+    margin-top: auto; /* Изменено */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    background-color: #aea3a3;
+    position: fixed; /* Добавлено */
+    bottom: 0; /* Добавлено */
+    width: 100%; /* Добавлено */
+    color: #fff;
+}
+
+.NameByFooter 
+{
+text-align: center; 
+font-size: 1.45rem;
+font-weight: bold;
+margin-left: 20px; 
+}
+
+.contacts 
+{
+font-weight: bolder;
+margin-right: 40px; 
+}
+
+.navigation {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #2d2424;
+    font-family: "Ledger";
+}
+
+.navigation.open {
+    display: block;
+}
+
+.navigation ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.navigation ul li {
+    text-align: center;
+}
+
+.navigation ul li a {
+    display: block;
+    padding: 10px;
+    color: #fff;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.navigation ul li a:hover {
+    background-color: #000;
+}
+.burger{
+    display: none;
+    position: relative;
+    z-index: 50;
+    align-items: center;
+    justify-content: flex-end;
+    width: 30px;
+    height: 18px;
+}
+
+.burger span{
+    height: 2px;
+    width: 80%;
+    transform: scale(1);
+    background-color: #FAF6F2;
+}
+
+.burger::before, .burger::after{
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background-color: #FAF6F2;
+    transition: all 0.3s ease 0s;
+}
+
+.burger::before { top: 0 }
+
+.burger::after { bottom: 0 }
+
+
+/* Добавляем класс active для анимации иконки бургера */
+.burger.active span { transform: scale(0) }
+
+.burger.active::before{
+    top: 50%;
+    transform: rotate(-45deg) translate(0, -50%);
+}
+
+.burger.active::after{
+    bottom: 50%;
+    transform: rotate(45deg) translate(0, 50%);
+}
+@keyframes burgerAnimation {
+  from {opacity: 0}
+  to {opacity: 1}
+}
+.open{
+  display: flex !important;
+}

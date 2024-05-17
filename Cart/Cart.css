@@ -1,0 +1,138 @@
+@font-face {
+    font-family: "Inria Serif";
+    src: url('../fonts/InriaSerif-Regular.ttf');
+}
+
+@font-face {
+    font-family: "Ledger";
+    src: url('../fonts/Ledger-Regular.ttf');
+}
+
+body {
+    font-family: "Inria Serif","Ledger";
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Центрируем по горизонтали */
+}
+
+h1 {
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+.total-price {
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.product-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Центрируем по горизонтали */
+    width: 200px;
+    margin-bottom: 20px; /* Добавляем отступ снизу для разделения товаров */
+}
+
+.product-details > div {
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+}
+
+.product-details > div > div {
+    width: 50%;
+}
+
+.product-details img {
+    width: 100%;
+    height: auto;
+}
+
+#total-price {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+#cart-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Центрируем по горизонтали */
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1400px) {
+    .burger { 
+        display: flex; 
+    }
+    .navigation {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        top: 0; bottom: 0; left: 0; right: 0;
+        z-index: 50;
+        overflow-y: auto;
+        left: 50%; 
+        top: 50%; 
+        transform: translate(-50%, -50%); 
+        background-color: black;
+        animation: burgerAnimation 0.4s;
+    }
+
+    .navigation ul li {
+        margin-top: 50px; 
+    }    
+    .FirstString {
+        height: 60px; 
+        padding: 10px 0;
+    }
+
+    .Name {
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        font-size: 1.5rem;
+    }
+
+    .Menu {
+        display:none;
+    }
+    .NameByFooter {
+        font-size: 1rem;
+    }
+    .contacts {
+        font-size: 12px;
+    }
+}
